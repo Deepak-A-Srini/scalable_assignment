@@ -13,8 +13,8 @@ def send_email():
     """Sends an email using Gmail's SMTP server."""
 
     # Gmail credentials
-    sender_email = "deepaksrini27@gmail.com"
-    password = "Deepakmahi12!!"
+    sender_email = "2023mt93122@wilp.bits-pilani.ac.in"
+    password = ""
 
     try:
         # Create a message
@@ -22,11 +22,11 @@ def send_email():
         msg = EmailMessage()
         msg['Subject'] = "Test Email"
         msg['From'] = sender_email
-        msg['To'] = "deepaksrini27@gmail.com"
+        msg['To'] = ""
         msg.set_content(body)
     
         # Connect to Gmail's SMTP server
-        with smtplib.SMTP_SSL('smtp.gmail.com', 535) as smtp:
+        with smtplib.SMTP_SSL('smtp.gmail.com', 587) as smtp:
             smtp.login(sender_email, password)
             smtp.send_message(msg)
         
